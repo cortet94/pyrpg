@@ -166,11 +166,7 @@ def init_game_loop():
             command = ginput()
 
         if command == "h":
-            print("===================")
-            print("Command List")
-            print("(l)ook: observe your immediate surroundings")
-            print("(f)ight: go look for some trouble")
-            print("===================")
+            fprint(["Command List","(l)ook: observe your immediate surroundings","(f)ight: go look for some trouble"])
             ginput(p_enter)
         if command == "f":
             gprint(m_player["name"] + " goes looking for some trouble")
@@ -183,16 +179,35 @@ def init_game_loop():
 
 
 def print_player_stats():
-    print("===================")
-    print("Player Name:", m_player["name"])
-    print("Lvl:", m_player["level"])
-    print("HP:", m_player["current_hp"], "/", m_player["max_hp"])
-    print("MP:", m_player["current_mp"], "/", m_player["max_mp"])
-    print("Exp:", m_player["current_exp"], "/", m_player["next_level"])
-    print("Strength:", m_player["strength"])
-    print("Speed:", m_player["speed"])
-    print("Intellect:", m_player["intellect"])
-    print("===================")
+    fprint(["Lvl: " + str(m_player["level"]), "HP: " + str(m_player["current_hp"]) + "/" +  str(m_player["max_hp"]),
+            "MP: " + str(m_player["current_mp"]) + "/" + str(m_player["max_mp"]), "Exp: " + str(m_player["current_exp"]) + "/" + str(m_player["next_level"]),
+            "Exp: " + str(m_player["current_exp"]) + "/" + str(m_player["next_level"]), "Strength: " + str(m_player["strength"]),
+            "Speed: " + str(m_player["speed"]), "Intellect: " + str(m_player["intellect"])])
+
+
+def fprint(str_l):
+
+    # Get longest entry in string list
+    longest_str = ""
+
+    for string in str_l:
+        if len(string) > len(longest_str):
+            longest_str = string
+
+    delim = ""
+
+    for string in range(len(longest_str) + 4):
+        delim = delim + "="
+
+    print(delim)
+    for string in str_l:
+        print(string)
+    print(delim)
+
+
+
+
+
 
 
 def new_game(name, pclass):
