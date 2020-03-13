@@ -1,0 +1,1 @@
+{"max_hp": 28, "current_hp": 24, "max_mp": 0, "current_mp": 0, "strength": 14, "speed": 10, "intellect": 6, "current_exp": 0, "next_level": 100, "level": 1, "gold": 0, "name": "Corey"}

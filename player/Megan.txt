@@ -1,0 +1,1 @@
+{"max_hp": 200, "current_hp": 200, "max_mp": 0, "current_mp": 0, "strength": 200, "speed": 200, "intellect": 200, "current_exp": 0, "next_level": 100, "level": 1, "gold": 0, "name": "Megan"}
